@@ -6,3 +6,21 @@ body {
     max-width: 800px;
     margin: auto;
 }
+
+header h1 {
+    color: #333;
+}
+
+.form-group {
+    text-align: center;
+}
+
+.input-group input {
+    text-transform: uppercase;
+}
+
+.table {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}

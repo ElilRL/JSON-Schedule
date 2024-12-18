@@ -13,7 +13,7 @@ const scheduleData = [
     "startTime": "8:42 a.m.",
     "endTime": "9:49 a.m.",
     "name": "BCC ENG 121",
-    "room": "Room A121",
+    "room": " A121",
     "teacher": "Mr. Vona",
     "days": ["A", "B", "D", "E", "F"]
   },
@@ -22,7 +22,7 @@ const scheduleData = [
     "startTime": "9:54 a.m.",
     "endTime": "11:01 a.m.",
     "name": "Criminology and Law",
-    "room": "Room A106",
+    "room": " A106",
     "teacher": "Mr. Berra",
     "days": ["A", "C", "D", "E", "G"]
   },
@@ -31,7 +31,7 @@ const scheduleData = [
     "startTime": "11:47 a.m.",
     "endTime": "12:54 p.m.",
     "name": "Honors NJIT IS219",
-    "room": "Room C104",
+    "room": " C104",
     "teacher": "Ms. McDonald",
     "days": ["B", "C", "D", "F", "G"]
   },
@@ -40,7 +40,7 @@ const scheduleData = [
     "startTime": "12:59 p.m.",
     "endTime": "2:06 p.m.",
     "name": "Physical Ed 12",
-    "room": "Room GYM Q1",
+    "room": "GYM Q1",
     "teacher": "Ms. Agabiti",
     "days": ["A", "B", "D", "E", "G"]
   },
@@ -49,19 +49,19 @@ const scheduleData = [
     "startTime": "2:10 p.m.",
     "endTime": "3:17 p.m.",
     "name": "Statistics",
-    "room": "Room B205",
+    "room": " B205",
     "teacher": "Ms. Walkiewicz",
     "days": ["A", "B", "D", "E", "F"]
   }
 ];
 
 $(document).ready(function () {
-  // Event Listener for Button
+  
   $("#submitDay").click(function () {
     const dayInput = $("#dayInput").val().toUpperCase();
     const validDays = ["A", "B", "C", "D", "E", "F", "G"];
 
-    // Validate the Input
+ 
     if (!validDays.includes(dayInput)) {
       alert("Please enter a valid day (A-G).");
       return;
@@ -70,12 +70,12 @@ $(document).ready(function () {
     displaySchedule(dayInput);
   });
 
-  // Function to Display Filtered Schedule
+  
   function displaySchedule(day) {
     const scheduleList = $("#scheduleList");
     scheduleList.empty();
 
-    // Filter Schedule Based on the Input Day
+   
     const filteredData = scheduleData.filter(item => item.days.includes(day));
 
     if (filteredData.length === 0) {
@@ -83,7 +83,7 @@ $(document).ready(function () {
       return;
     }
 
-    // Loop Through Filtered Data and Display it
+   
     filteredData.forEach(item => {
       const time = `${item.startTime} - ${item.endTime}`;
       scheduleList.append(`
